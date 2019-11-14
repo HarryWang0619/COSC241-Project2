@@ -186,7 +186,7 @@ class MinimaxAgent(MultiAgentSearchAgent):
         bestAction = None
 
         for action in gameState.getLegalActions():
-            score = max(bestScore, minValue( gameState.generateSuccessor(0, action), self.depth, 1))
+            score = max(bestScore, minValue(gameState.generateSuccessor(0, action), self.depth, 1))
             if score > bestScore:
                 bestScore = score
                 bestAction = action
